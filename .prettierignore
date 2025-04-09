@@ -1,0 +1,10 @@
+*.scss
+*.svg
+*.html
+*.json
+*.ico
+.*
+public/
+node_modules/
+README.md
+*.css

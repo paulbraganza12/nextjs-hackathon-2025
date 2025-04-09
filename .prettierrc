@@ -1,0 +1,10 @@
+{
+    "experimentalTernaries": true,
+    "printWidth": 120,
+    "tabWidth": 2,
+    "useTabs": false,
+    "bracketSameLine": true,
+    "parser": "typescript",
+    "singleAttributePerLine": true,
+    "singleQuote": true
+}

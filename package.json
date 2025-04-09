@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --color --format table --max-warnings 0 --cache",
+    "lint:all": "eslint \"./src/**/*.{ts,tsx,html,json}\"",
+    "lint:fix": "eslint \"./src/**/*.{ts,tsx,html,json}\" --fix",
+    "prettier:fix": "prettier --write \"./**/*\"",
+    "prettier:check": "prettier \"./**/*\" --check",
+    "commit:check": "npm run prettier:fix && npm run lint && npm run build"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.0",
@@ -27,6 +32,10 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.5",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.6",
+    "eslint-formatter-table": "^7.32.1",
+    "prettier": "^3.5.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
