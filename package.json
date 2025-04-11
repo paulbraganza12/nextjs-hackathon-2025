@@ -38,6 +38,7 @@
     "eslint-formatter-table": "^7.32.1",
     "eslint-plugin-prettier": "^5.2.6",
     "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4.1.3",
     "typescript": "^5"
   }
