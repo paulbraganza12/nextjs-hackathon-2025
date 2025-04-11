@@ -3,8 +3,11 @@
     "printWidth": 120,
     "tabWidth": 2,
     "useTabs": false,
-    "bracketSameLine": true,
+    "bracketSameLine": false,
     "parser": "typescript",
     "singleAttributePerLine": true,
-    "singleQuote": true
+    "singleQuote": false,
+    "plugins": [
+        "prettier-plugin-tailwindcss"
+    ]
 }
