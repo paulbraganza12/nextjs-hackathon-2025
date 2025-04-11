@@ -1,3 +1,11 @@
+"use client";
+
+import { CategoryBarFilter } from "@/components/layout/Navbar/CategoryBarFilter";
+
 export default function Home() {
-  return <div className=""></div>;
+  return (
+    <div>
+      <CategoryBarFilter onCategorySelected={(e) => {}} />
+    </div>
+  );
 }
