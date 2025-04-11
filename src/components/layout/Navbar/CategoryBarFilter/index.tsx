@@ -3,7 +3,7 @@
 import IconButton from "@/components/ui/icon-button";
 import VerticalScrollContainer from "@/components/ui/vertical-scroll-container";
 import useIsMobile from "@/hooks/use-is-mobile.hook";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 const categories = [
   { label: "Cabins", icon: "cabins" },
@@ -38,9 +38,16 @@ const categories = [
 interface CategoryBarFilterProps {
   onCategorySelected: (category: string) => void;
 }
-export default function CategoryBarFilter({ onCategorySelected }: CategoryBarFilterProps) {
+
+export const CategoryBarFilter = ({ onCategorySelected }: CategoryBarFilterProps) => {
   const [activeCategory, setActiveCategory] = useState<string>(categories[0].icon);
   const isMobile = useIsMobile();
+
+  const memoizedCategories = useMemo(() => categories, []);
+
+  const handleCategoryClick = useCallback((icon: string) => {
+    setActiveCategory(icon);
+  }, []);
 
   useEffect(() => {
     onCategorySelected(activeCategory);
@@ -50,25 +57,25 @@ export default function CategoryBarFilter({ onCategorySelected }: CategoryBarFil
     <>
       {isMobile ?
         <div className="no-scrollbar flex items-center gap-x-4 overflow-x-auto px-2 py-5 whitespace-nowrap md:gap-x-8">
-          {categories.map((category) => (
+          {memoizedCategories.map((category) => (
             <IconButton
               key={category.label}
               label={category.label}
               icon={category.icon}
               active={activeCategory === category.icon}
-              onClick={() => setActiveCategory(category.icon)}
+              onClick={() => handleCategoryClick(category.icon)}
             />
           ))}
         </div>
       : <VerticalScrollContainer>
           <div className="flex items-center gap-x-4 px-1 py-5 md:gap-x-8">
-            {categories.map((category) => (
+            {memoizedCategories.map((category) => (
               <IconButton
                 key={category.label}
                 label={category.label}
                 icon={category.icon}
                 active={activeCategory === category.icon}
-                onClick={() => setActiveCategory(category.icon)}
+                onClick={() => handleCategoryClick(category.icon)}
               />
             ))}
           </div>
@@ -76,4 +83,4 @@ export default function CategoryBarFilter({ onCategorySelected }: CategoryBarFil
       }
     </>
   );
-}
+};

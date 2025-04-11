@@ -1,5 +1,6 @@
 "use client";
-import CategoryBarFilter from "@/components/layout/Navbar/CategoryBarFilter/category-bar-filter";
+
+import { CategoryBarFilter } from "@/components/layout/Navbar/CategoryBarFilter";
 
 export default function Home() {
   return (
