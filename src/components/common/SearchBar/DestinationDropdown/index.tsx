@@ -2,6 +2,8 @@ import { Input } from '@/components/ui';
 import { DestinationDropdownProps } from './DestinationDropdown';
 
 export const DestinationDropdown = ({ isFocused, onFocus, inputRef }: DestinationDropdownProps) => {
+  console.log(isFocused);
+
   return (
     <div>
       <div
