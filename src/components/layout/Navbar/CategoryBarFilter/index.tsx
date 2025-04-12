@@ -56,7 +56,9 @@ export const CategoryBarFilter = ({ onCategorySelected }: CategoryBarFilterProps
   return (
     <>
       {isMobile ?
-        <div className="no-scrollbar flex items-center gap-x-4 overflow-x-auto px-2 py-5 whitespace-nowrap md:gap-x-8">
+        <div className="no-scrollbar flex items-center gap-x-4 overflow-x-auto px-2 py-2  md:py-5 whitespace-nowrap md:gap-x-8
+        shadow-md md:shadow-none
+        ">
           {memoizedCategories.map((category) => (
             <IconButton
               key={category.label}

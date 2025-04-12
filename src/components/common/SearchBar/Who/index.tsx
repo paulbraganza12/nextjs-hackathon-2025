@@ -11,7 +11,7 @@ export const Who = ({ onFocus, inputRef, enableSearchButton }: WhoProps) => {
           <div className="text-xs font-semibold  ">Who</div>
           <input
             ref={inputRef}
-            className="w-[218px] border-0 shadow-none pl-0
+            className="max-w-[218px] border-0 shadow-none pl-0
             py-0 px-0 h-5
             focus-visible:outline-none focus-visible:ring-0 text-sm rounded-none  caret-transparent"
             placeholder="Add guests"

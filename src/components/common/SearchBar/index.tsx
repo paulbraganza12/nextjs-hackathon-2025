@@ -3,6 +3,7 @@ import { useRef, useState, useEffect, useCallback } from 'react';
 import { DestinationDropdown } from './DestinationDropdown';
 import { Dates } from './Dates';
 import { Who } from './Who';
+import { MobileSearchBar } from './MobileSearchBar';
 
 export const SearchBar = () => {
   type InputName = 'where' | 'checkin' | 'checkout' | 'checkwho' | null;
@@ -54,40 +55,45 @@ export const SearchBar = () => {
   const isFocused = focusedInput !== null;
 
   return (
-    <div
-      ref={searchBarRef}
-      className={`flex border border-gray-200 rounded-full shadow-sm ${isFocused ? 'bg-gray-100' : 'bg-white'}`}>
-      <div className={getItemClass('where')}>
-        <DestinationDropdown
-          isFocused={focusedInput === 'where'}
-          onFocus={() => handleFocus('where')}
-          inputRef={whereRef}
-        />
+    <>
+      <div
+        ref={searchBarRef}
+        className={`hidden md:flex  border border-gray-200 rounded-full shadow-sm ${isFocused ? 'bg-gray-100' : 'bg-white'}`}>
+        <div className={getItemClass('where')}>
+          <DestinationDropdown
+            isFocused={focusedInput === 'where'}
+            onFocus={() => handleFocus('where')}
+            inputRef={whereRef}
+          />
+        </div>
+        <div className={getItemClass('checkin')}>
+          <Dates
+            inputRef={checkInRef}
+            type="in"
+            onFocus={() => handleFocus('checkin')}
+            isFocused={focusedInput === 'checkin'}
+          />
+        </div>
+        <div className={getItemClass('checkout')}>
+          <Dates
+            inputRef={checkOutRef}
+            type="out"
+            onFocus={() => handleFocus('checkout')}
+            isFocused={focusedInput === 'checkout'}
+          />
+        </div>
+        <div className={getItemClass('checkwho')}>
+          <Who
+            inputRef={checkWhoRef}
+            onFocus={() => handleFocus('checkwho')}
+            isFocused={focusedInput === 'checkwho'}
+            enableSearchButton={isFocused}
+          />
+        </div>
       </div>
-      <div className={getItemClass('checkin')}>
-        <Dates
-          inputRef={checkInRef}
-          type="in"
-          onFocus={() => handleFocus('checkin')}
-          isFocused={focusedInput === 'checkin'}
-        />
+      <div className="md:hidden">
+        <MobileSearchBar />
       </div>
-      <div className={getItemClass('checkout')}>
-        <Dates
-          inputRef={checkOutRef}
-          type="out"
-          onFocus={() => handleFocus('checkout')}
-          isFocused={focusedInput === 'checkout'}
-        />
-      </div>
-      <div className={getItemClass('checkwho')}>
-        <Who
-          inputRef={checkWhoRef}
-          onFocus={() => handleFocus('checkwho')}
-          isFocused={focusedInput === 'checkwho'}
-          enableSearchButton={isFocused}
-        />
-      </div>
-    </div>
+    </>
   );
 };
