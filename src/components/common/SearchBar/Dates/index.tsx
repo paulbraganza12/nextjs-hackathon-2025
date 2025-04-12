@@ -1,18 +1,17 @@
-import { DatesProps } from './Dates';
+import { DatesProps } from "./Dates";
 
 export const Dates = ({ inputRef, onFocus, type }: DatesProps) => {
   return (
     <div>
       <div
-        className="px-8 py-3 cursor-pointer"
-        onClick={onFocus}>
+        className="cursor-pointer px-8 py-3"
+        onClick={onFocus}
+      >
         <div>
-          <div className="text-xs font-semibold  ">Check {type}</div>
+          <div className="text-xs font-semibold">Check {type}</div>
           <input
             ref={inputRef}
-            className="max-w-[100px] border-0 shadow-none pl-0
-            py-0 px-0 h-5
-            focus-visible:outline-none focus-visible:ring-0 text-sm rounded-none  caret-transparent"
+            className="h-5 max-w-[100px] rounded-none border-0 px-0 py-0 pl-0 text-sm caret-transparent shadow-none focus-visible:ring-0 focus-visible:outline-none"
             placeholder="Add Dates"
             readOnly
           />

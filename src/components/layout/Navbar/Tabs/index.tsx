@@ -1,5 +1,5 @@
 export const Tabs = () => {
-  const tabs = ['Stays', 'Experiences'];
+  const tabs = ["Stays", "Experiences"];
 
   return (
     <nav>
@@ -8,9 +8,10 @@ export const Tabs = () => {
           <a
             key={tab}
             href="#"
-            className={`font-medium text-base px-4 py-2 rounded-4xl transition-all ${
-              index === 1 && 'text-gray-500 hover:text-foreground hover:bg-gray-100 font-normal'
-            }`}>
+            className={`rounded-4xl px-4 py-2 text-base font-medium transition-all ${
+              index === 1 && "hover:text-foreground font-normal text-gray-500 hover:bg-gray-100"
+            }`}
+          >
             {tab}
           </a>
         ))}

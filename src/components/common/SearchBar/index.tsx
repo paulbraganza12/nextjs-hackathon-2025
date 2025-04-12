@@ -1,12 +1,12 @@
-'use client';
-import { useRef, useState, useEffect, useCallback } from 'react';
-import { DestinationDropdown } from './DestinationDropdown';
-import { Dates } from './Dates';
-import { Who } from './Who';
-import { MobileSearchBar } from './MobileSearchBar';
+"use client";
+import { useRef, useState, useEffect, useCallback } from "react";
+import { DestinationDropdown } from "./DestinationDropdown";
+import { Dates } from "./Dates";
+import { Who } from "./Who";
+import { MobileSearchBar } from "./MobileSearchBar";
 
 export const SearchBar = () => {
-  type InputName = 'where' | 'checkin' | 'checkout' | 'checkwho' | null;
+  type InputName = "where" | "checkin" | "checkout" | "checkwho" | null;
 
   const [focusedInput, setFocusedInput] = useState<InputName>(null);
   const searchBarRef = useRef<HTMLDivElement>(null);
@@ -40,15 +40,15 @@ export const SearchBar = () => {
         handleBlur();
       }
     };
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [handleBlur]);
 
   const getItemClass = (inputName: InputName) => {
-    const baseClasses = focusedInput !== inputName ? 'hover:bg-gray-100' : '';
-    const focusClass = focusedInput === inputName ? 'shadow-md bg-white border border-gray-300' : '';
+    const baseClasses = focusedInput !== inputName ? "hover:bg-gray-100" : "";
+    const focusClass = focusedInput === inputName ? "shadow-md bg-white border border-gray-300" : "";
     return `max-h-[66px] border border-transparent ${baseClasses} rounded-full cursor-pointer ${focusClass}`.trim();
   };
 
@@ -58,35 +58,36 @@ export const SearchBar = () => {
     <>
       <div
         ref={searchBarRef}
-        className={`hidden md:flex  border border-gray-200 rounded-full shadow-sm ${isFocused ? 'bg-gray-100' : 'bg-white'}`}>
-        <div className={getItemClass('where')}>
+        className={`hidden rounded-full border border-gray-200 shadow-sm md:flex ${isFocused ? "bg-gray-100" : "bg-white"}`}
+      >
+        <div className={getItemClass("where")}>
           <DestinationDropdown
-            isFocused={focusedInput === 'where'}
-            onFocus={() => handleFocus('where')}
+            isFocused={focusedInput === "where"}
+            onFocus={() => handleFocus("where")}
             inputRef={whereRef}
           />
         </div>
-        <div className={getItemClass('checkin')}>
+        <div className={getItemClass("checkin")}>
           <Dates
             inputRef={checkInRef}
             type="in"
-            onFocus={() => handleFocus('checkin')}
-            isFocused={focusedInput === 'checkin'}
+            onFocus={() => handleFocus("checkin")}
+            isFocused={focusedInput === "checkin"}
           />
         </div>
-        <div className={getItemClass('checkout')}>
+        <div className={getItemClass("checkout")}>
           <Dates
             inputRef={checkOutRef}
             type="out"
-            onFocus={() => handleFocus('checkout')}
-            isFocused={focusedInput === 'checkout'}
+            onFocus={() => handleFocus("checkout")}
+            isFocused={focusedInput === "checkout"}
           />
         </div>
-        <div className={getItemClass('checkwho')}>
+        <div className={getItemClass("checkwho")}>
           <Who
             inputRef={checkWhoRef}
-            onFocus={() => handleFocus('checkwho')}
-            isFocused={focusedInput === 'checkwho'}
+            onFocus={() => handleFocus("checkwho")}
+            isFocused={focusedInput === "checkwho"}
             enableSearchButton={isFocused}
           />
         </div>

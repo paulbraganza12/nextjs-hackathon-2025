@@ -1,11 +1,12 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export const RightSection = () => {
   return (
-    <div className="flex gap-6 items-center">
+    <div className="flex items-center gap-6">
       <a
         href="#"
-        className="font-semibold text-sm">
+        className="text-sm font-semibold"
+      >
         Airbnb your home
       </a>
 
@@ -15,10 +16,7 @@ export const RightSection = () => {
         width={16}
         height={16}
       />
-      <div
-        className="
-      py-2 pl-3.5 pr-2 rounded-full border-gray-300 flex border
-      ">
+      <div className="flex rounded-full border border-gray-300 py-2 pr-2 pl-3.5">
         <Image
           src="/icons/hamburger.svg"
           alt="Icon"

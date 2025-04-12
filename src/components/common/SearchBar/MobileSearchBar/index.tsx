@@ -1,12 +1,13 @@
 export const MobileSearchBar = () => {
   return (
-    <div className="flex md:hidden border border-gray-200 rounded-full shadow-lg bg-white w-full p-3 h-14 justify-center items-center">
+    <div className="flex h-14 w-full items-center justify-center rounded-full border border-gray-200 bg-white p-3 shadow-lg md:hidden">
       <svg
-        className="w-3.5 h-3.5"
+        className="h-3.5 w-3.5"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg">
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -14,7 +15,7 @@ export const MobileSearchBar = () => {
           d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"
         />
       </svg>
-      <p className="text-xs font-semibold ml-2.5">Start your search</p>
+      <p className="ml-2.5 text-xs font-semibold">Start your search</p>
     </div>
   );
 };
