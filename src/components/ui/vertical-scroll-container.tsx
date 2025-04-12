@@ -50,7 +50,7 @@ export default function VerticalScrollContainer({ children }: VerticalScrollCont
     <div className="relative mx-3 me-5 px-4">
       <div
         ref={containerRef}
-        className="no-scrollbar overflow-x-auto whitespace-nowrap"
+        className="no-scrollbar overflow-x-auto scroll-smooth whitespace-nowrap"
       >
         {children}
       </div>
