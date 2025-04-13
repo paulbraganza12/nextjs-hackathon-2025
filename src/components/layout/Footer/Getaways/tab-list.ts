@@ -1,0 +1,166 @@
+/* eslint-disable prettier/prettier */
+import { TabList } from "./Getaways";
+
+export const tavList: Array<TabList> = [
+  {
+    category: "Popular",
+    items: [
+      { place: "Aberfeldy", type: "Holiday rentals" },
+      { place: "Amsterdam", type: "Pet-friendly rentals" },
+      { place: "Athens", type: "House rentals" },
+      { place: "Aviemore", type: "House rentals" },
+      { place: "Bakewell", type: "Cottage rentals" },
+      { place: "Barcelona", type: "Holiday rentals" },
+      { place: "Bath", type: "Cabin rentals" },
+      { place: "Betws-y-Coed", type: "Holiday rentals" },
+      { place: "Birmingham", type: "Cottage rentals" },
+      { place: "Bordeaux", type: "Cottage rentals" },
+      { place: "Bourton-on-the-Water", type: "Holiday rentals" },
+      { place: "Brecon", type: "Villa rentals" },
+      { place: "Bridport", type: "Holiday rentals" },
+      { place: "Bristol", type: "Cottage rentals" },
+      { place: "Cambridge", type: "Holiday rentals" },
+      { place: "Chamonix", type: "Flat rentals" },
+      { place: "Cheddar", type: "Cottage rentals" }
+    ]
+  },
+  {
+    category: "Historic",
+    items: [
+      { place: "Aberdeen", type: "Cabin rentals" },
+      { place: "Aberystwyth", type: "Cottage rentals" },
+      { place: "Alnwick", type: "Holiday rentals" },
+      { place: "Bamburgh", type: "Cottage rentals" },
+      { place: "Berwick-upon-Tweed", type: "Cottage rentals" },
+      { place: "Boscastle", type: "Cottage rentals" },
+      { place: "Brittany", type: "Holiday rentals" },
+      { place: "Budapest", type: "Flat rentals" },
+      { place: "Cardiff", type: "Pet-friendly rentals" },
+      { place: "Castleton", type: "Cottage rentals" },
+      { place: "Cheltenham", type: "Flat rentals" },
+      { place: "Conwy", type: "Flat rentals" },
+      { place: "Criccieth", type: "Cottage rentals" },
+      { place: "Dartmouth", type: "Chalet rentals" },
+      { place: "Donegal", type: "Beachfront rentals" },
+      { place: "Dublin", type: "Flat rentals" },
+      { place: "Dumfries", type: "Cottage rentals" }
+    ]
+  },
+  {
+    category: "Coastal",
+    items: [
+      { place: "Abersoch", type: "Pet-friendly rentals" },
+      { place: "Agadir", type: "Rentals with pools" },
+      { place: "Albufeira", type: "House rentals" },
+      { place: "Aldeburgh", type: "House rentals" },
+      { place: "Alicante", type: "Holiday rentals" },
+      { place: "Almería", type: "Villa rentals" },
+      { place: "Alnmouth", type: "Holiday rentals" },
+      { place: "Alvor", type: "House rentals" },
+      { place: "Antibes", type: "Villa rentals" },
+      { place: "Ayia Napa", type: "House rentals" },
+      { place: "Barmouth", type: "Cottage rentals" },
+      { place: "Beach", type: "Holiday rentals" },
+      { place: "Beer", type: "Cottage rentals" },
+      { place: "Benalmádena", type: "Flat rentals" },
+      { place: "Benidorm", type: "Holiday rentals" },
+      { place: "Biarritz", type: "Rentals with pools" },
+      { place: "Blackpool", type: "House rentals" }
+    ]
+  },
+  {
+    category: "Island",
+    items: [
+      { place: "Berlin", type: "Flat rentals" },
+      { place: "Cork", type: "Cottage rentals" },
+      { place: "Hayling Island", type: "Holiday rentals" },
+      { place: "Ingoldmells", type: "Holiday rentals" },
+      { place: "La Rochelle", type: "House rentals" },
+      { place: "Windsor", type: "Holiday rentals" }
+    ]
+  },
+  {
+    category: "Lakes",
+    items: [
+      { place: "Ambleside", type: "House rentals" },
+      { place: "Bowness-on-Windermere", type: "Flat rentals" },
+      { place: "Coniston", type: "Apartment rentals" },
+      { place: "Grasmere", type: "Cottage rentals" },
+      { place: "Hawkshead", type: "Cottage rentals" },
+      { place: "Keswick", type: "Cabin rentals" },
+      { place: "Kissimmee", type: "Rentals with pools" },
+      { place: "Windermere", type: "Flat rentals" },
+      { place: "Lakeside", type: "Holiday rentals" },
+      { place: "Morzine", type: "Holiday rentals" },
+      { place: "New York", type: "Holiday rentals" },
+      { place: "Orlando", type: "House rentals" },
+      { place: "Tattershall", type: "Cabin rentals" }
+    ]
+  },
+  {
+    category: "Unique Stays",
+    items: [
+      { place: "Yurt Rentals", type: "United States" },
+      { place: "Yurt Rentals", type: "United Kingdom" },
+      { place: "Castle Rentals", type: "United States" },
+      { place: "Houseboats", type: "United States" },
+      { place: "Holiday Caravans", type: "United Kingdom" },
+      { place: "Private Island Rentals", type: "United States" },
+      { place: "Farm Houses", type: "United States" },
+      { place: "Farm Cottages", type: "United Kingdom" },
+      { place: "Cabin Rentals", type: "Australia" },
+      { place: "Luxury Cabins", type: "United Kingdom" },
+      { place: "Luxury Cabins", type: "United States" },
+      { place: "Holiday Chalets", type: "United Kingdom" },
+      { place: "Cottage Rentals", type: "United States" },
+      { place: "Holiday Cottages", type: "United Kingdom" },
+      { place: "Mansion Rentals", type: "United States" },
+      { place: "Villa Rentals", type: "United Kingdom" },
+      { place: "Holiday Bungalows", type: "United Kingdom" }
+    ]
+  },
+  {
+    category: "Categories",
+    items: [
+      { place: "Amazing pools" },
+      { place: "Arctic" },
+      { place: "Camping" },
+      { place: "Camper vans" },
+      { place: "Castles" },
+      { place: "Containers" },
+      { place: "Countryside" },
+      { place: "Design" },
+      { place: "Earth homes" },
+      { place: "Farms" },
+      { place: "National parks" },
+      { place: "Vineyards" },
+      { place: "OMG!" },
+      { place: "Tiny homes" },
+      { place: "Towers" },
+      { place: "Windmills" },
+      { place: "Luxe" }
+    ]
+  },
+  {
+    category: "Things to do",
+    items: [
+      { place: "London", type: "England" },
+      { place: "Paris", type: "Île-de-France" },
+      { place: "New York", type: "New York" },
+      { place: "Barcelona", type: "Catalonia" },
+      { place: "İstanbul", type: "İstanbul" },
+      { place: "Bali", type: "Indonesia" },
+      { place: "Amsterdam", type: "North Holland" },
+      { place: "Miami", type: "Florida" },
+      { place: "Madrid", type: "Community of Madrid" },
+      { place: "Los Angeles", type: "California" },
+      { place: "Rome", type: "Lazio" },
+      { place: "Lisbon", type: "Lisbon" },
+      { place: "Tokyo", type: "Tokyo Prefecture" },
+      { place: "Vienna", type: "Vienna" },
+      { place: "Athens", type: "Greece" },
+      { place: "Prague", type: "Czechia" },
+      { place: "Orlando", type: "Florida" }
+    ]
+  }
+];
