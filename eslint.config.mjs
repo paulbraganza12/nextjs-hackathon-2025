@@ -28,6 +28,7 @@ const eslintConfig = [
     rules: {
       // Optional: show Prettier errors as ESLint errors
       "prettier/prettier": "warn",
+      "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
     },
   },
 ];

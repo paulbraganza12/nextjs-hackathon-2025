@@ -35,11 +35,7 @@ const categories = [
   { label: "Raids", icon: "raids" },
 ];
 
-interface CategoryBarFilterProps {
-  onCategorySelected: (category: string) => void;
-}
-
-export const CategoryBarFilter = ({ onCategorySelected }: CategoryBarFilterProps) => {
+export const CategoryBarFilter = () => {
   const [activeCategory, setActiveCategory] = useState<string>(categories[0].icon);
   const isMobile = useIsMobile();
 
@@ -50,8 +46,8 @@ export const CategoryBarFilter = ({ onCategorySelected }: CategoryBarFilterProps
   }, []);
 
   useEffect(() => {
-    onCategorySelected(activeCategory);
-  }, [activeCategory, onCategorySelected]);
+    // onCategorySelected(activeCategory);
+  }, [activeCategory]);
 
   return (
     <>

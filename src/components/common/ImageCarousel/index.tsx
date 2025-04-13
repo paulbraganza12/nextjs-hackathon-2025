@@ -14,7 +14,6 @@ import { useEffect, useState } from "react";
 import { ImageCarouselProps } from "./image-carousel";
 
 export const ImageCarousel = ({ images, children, tag }: ImageCarouselProps) => {
-  console.log(images);
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);

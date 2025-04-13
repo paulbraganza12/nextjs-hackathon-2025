@@ -1,15 +1,14 @@
-"use client";
-
 import BnbCard from "@/components/common/BnbCard";
 import { CategoryBarFilter } from "@/components/layout/Navbar/CategoryBarFilter";
-import { propertyData } from "@/lib/data/property.data";
+import { getRecommendedProperties } from "@/shared/data-access/http-properties-service";
 
-export default function Home() {
+export default async function Home() {
+  const properties = await getRecommendedProperties();
   return (
     <div className="px-5">
-      <CategoryBarFilter onCategorySelected={() => {}} />
+      <CategoryBarFilter />
       <div className="grid grid-cols-2 gap-6 gap-y-8 px-5 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
-        {propertyData.map((item) => {
+        {properties.map((item) => {
           return (
             <BnbCard
               key={item.id}
