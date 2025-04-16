@@ -1,1 +1,1 @@
-export * from './use-scroll-trigger'
+export * from "./use-scroll-trigger";

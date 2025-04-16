@@ -28,6 +28,7 @@ export const SearchBar = () => {
     if (inputName && refs[inputName]?.current) {
       refs[inputName].current.focus();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleBlur = useCallback(() => {
@@ -92,7 +93,7 @@ export const SearchBar = () => {
           />
         </div>
       </div>
-      <div className="md:hidden mt-3">
+      <div className="mt-3 md:hidden">
         <MobileSearchBar />
       </div>
     </>

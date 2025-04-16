@@ -50,13 +50,13 @@ export const ImageCarousel = ({ images, children, tag }: ImageCarouselProps) => 
                   key={index}
                   className="flex items-center"
                 >
-                  <div className="relative aspect-[4/3] w-full max-w-sm sm:max-w-md md:max-w-lg lg:aspect-[3/3] lg:max-w-xl">
+                  <div className="relative h-full w-full">
                     <Image
                       src={image}
                       alt="Gloucestershire, UK - Isis Lake"
                       fill
                       priority
-                      className="rounded-xl object-cover"
+                      className="rounded-xl object-cover object-center"
                     />
                   </div>
                 </CarouselItem>

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { TabList } from "./../Footer.d";
 
 export const tavList: Array<TabList> = [
@@ -21,8 +20,8 @@ export const tavList: Array<TabList> = [
       { place: "Bristol", type: "Cottage rentals" },
       { place: "Cambridge", type: "Holiday rentals" },
       { place: "Chamonix", type: "Flat rentals" },
-      { place: "Cheddar", type: "Cottage rentals" }
-    ]
+      { place: "Cheddar", type: "Cottage rentals" },
+    ],
   },
   {
     category: "Historic",
@@ -43,8 +42,8 @@ export const tavList: Array<TabList> = [
       { place: "Dartmouth", type: "Chalet rentals" },
       { place: "Donegal", type: "Beachfront rentals" },
       { place: "Dublin", type: "Flat rentals" },
-      { place: "Dumfries", type: "Cottage rentals" }
-    ]
+      { place: "Dumfries", type: "Cottage rentals" },
+    ],
   },
   {
     category: "Coastal",
@@ -65,8 +64,8 @@ export const tavList: Array<TabList> = [
       { place: "Benalmádena", type: "Flat rentals" },
       { place: "Benidorm", type: "Holiday rentals" },
       { place: "Biarritz", type: "Rentals with pools" },
-      { place: "Blackpool", type: "House rentals" }
-    ]
+      { place: "Blackpool", type: "House rentals" },
+    ],
   },
   {
     category: "Island",
@@ -76,8 +75,8 @@ export const tavList: Array<TabList> = [
       { place: "Hayling Island", type: "Holiday rentals" },
       { place: "Ingoldmells", type: "Holiday rentals" },
       { place: "La Rochelle", type: "House rentals" },
-      { place: "Windsor", type: "Holiday rentals" }
-    ]
+      { place: "Windsor", type: "Holiday rentals" },
+    ],
   },
   {
     category: "Lakes",
@@ -94,8 +93,8 @@ export const tavList: Array<TabList> = [
       { place: "Morzine", type: "Holiday rentals" },
       { place: "New York", type: "Holiday rentals" },
       { place: "Orlando", type: "House rentals" },
-      { place: "Tattershall", type: "Cabin rentals" }
-    ]
+      { place: "Tattershall", type: "Cabin rentals" },
+    ],
   },
   {
     category: "Unique Stays",
@@ -116,8 +115,8 @@ export const tavList: Array<TabList> = [
       { place: "Holiday Cottages", type: "United Kingdom" },
       { place: "Mansion Rentals", type: "United States" },
       { place: "Villa Rentals", type: "United Kingdom" },
-      { place: "Holiday Bungalows", type: "United Kingdom" }
-    ]
+      { place: "Holiday Bungalows", type: "United Kingdom" },
+    ],
   },
   {
     category: "Categories",
@@ -138,8 +137,8 @@ export const tavList: Array<TabList> = [
       { place: "Tiny homes" },
       { place: "Towers" },
       { place: "Windmills" },
-      { place: "Luxe" }
-    ]
+      { place: "Luxe" },
+    ],
   },
   {
     category: "Things to do",
@@ -160,7 +159,7 @@ export const tavList: Array<TabList> = [
       { place: "Vienna", type: "Vienna" },
       { place: "Athens", type: "Greece" },
       { place: "Prague", type: "Czechia" },
-      { place: "Orlando", type: "Florida" }
-    ]
-  }
+      { place: "Orlando", type: "Florida" },
+    ],
+  },
 ];

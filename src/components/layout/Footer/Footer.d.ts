@@ -6,8 +6,6 @@ export interface TabList {
   }[];
 }
 
-
-
 export interface MenuItems {
   title: string;
   items: {

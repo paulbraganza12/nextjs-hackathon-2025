@@ -9,7 +9,6 @@ import { useScrollTrigger } from "@/hooks";
 export const Navbar = () => {
   const scrolledUp = useScrollTrigger(20);
 
-
   return (
     <header
       className={`sticky top-0 z-50 bg-white transition-all duration-300 ${
@@ -22,8 +21,8 @@ export const Navbar = () => {
             <Logo hideOnMobile={true} />
           </div>
           <div
-            className={`search-tabs hidden md:block transition-all duration-300 ${
-              scrolledUp ? "opacity-0 -translate-y-4 pointer-events-none" : "opacity-100 translate-y-0"
+            className={`search-tabs hidden transition-all duration-300 md:block ${
+              scrolledUp ? "pointer-events-none -translate-y-4 opacity-0" : "translate-y-0 opacity-100"
             }`}
           >
             <Tabs />
@@ -32,8 +31,8 @@ export const Navbar = () => {
             <RightSection />
           </div>
           <div
-            className={`search w-full md:w-fit transition-all duration-300 ${
-              scrolledUp ? "md:translate-y-[-70px] scale-80" : "md:translate-y-0"
+            className={`search w-full transition-all duration-300 md:w-fit ${
+              scrolledUp ? "scale-80 md:translate-y-[-70px]" : "md:translate-y-0"
             }`}
           >
             <SearchBar />

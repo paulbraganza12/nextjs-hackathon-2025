@@ -1,24 +1,24 @@
-import { Container } from '@/components/common';
-import { Getaways } from './Getaways';
-import { FooterMenu } from './FooterMenu';
-import { FooterBottom } from './FooterBottom';
+import { Container } from "@/components/common";
+import { Getaways } from "./Getaways";
+import { FooterMenu } from "./FooterMenu";
+import { FooterBottom } from "./FooterBottom";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-100 mt-20">
+    <footer className="mt-20 bg-gray-100">
       <div>
         <Container>
           <div>
             <Getaways />
           </div>
           <div>
-          <FooterMenu />
+            <FooterMenu />
           </div>
         </Container>
-          <div>
-            <FooterBottom />
-          </div>
+        <div>
+          <FooterBottom />
+        </div>
       </div>
     </footer>
   );
-}
+};
