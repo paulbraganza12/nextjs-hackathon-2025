@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { TabList } from "./Getaways";
+import { TabList } from "./../Footer.d";
 
 export const tavList: Array<TabList> = [
   {

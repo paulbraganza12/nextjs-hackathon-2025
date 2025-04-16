@@ -5,3 +5,13 @@ export interface TabList {
     type?: string;
   }[];
 }
+
+
+
+export interface MenuItems {
+  title: string;
+  items: {
+    title: string;
+    link: string;
+  }[];
+}

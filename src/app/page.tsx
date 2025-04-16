@@ -5,9 +5,9 @@ import { getRecommendedProperties } from "@/shared/data-access/http-properties-s
 export default async function Home() {
   const properties = await getRecommendedProperties();
   return (
-    <div className="px-5">
+    <div >
       <CategoryBarFilter />
-      <div className="grid grid-cols-1 gap-6 px-5 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
+      <div className="grid grid-cols-1 gap-6 px-5 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 mt-5">
         {properties.map((item) => {
           return (
             <BnbCard

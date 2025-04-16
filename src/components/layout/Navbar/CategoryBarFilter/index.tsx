@@ -4,7 +4,7 @@ import { Container } from '@/components/common';
 import IconButton from '@/components/ui/icon-button';
 import VerticalScrollContainer from '@/components/ui/vertical-scroll-container';
 import useIsMobile from '@/hooks/use-is-mobile.hook';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 
 const categories = [
   { label: 'Cabins', icon: 'cabins' },
@@ -39,7 +39,6 @@ const categories = [
 interface CategoryBarFilterProps {
   onCategorySelected: (category: string) => void;
 }
-
 export const CategoryBarFilter = ({ onCategorySelected }: CategoryBarFilterProps) => {
   const [activeCategory, setActiveCategory] = useState<string>(categories[0].icon);
   const isMobile = useIsMobile();
@@ -48,19 +47,13 @@ export const CategoryBarFilter = ({ onCategorySelected }: CategoryBarFilterProps
 
   const handleCategoryClick = useCallback((icon: string) => {
     setActiveCategory(icon);
-  }, []);
-
-  useEffect(() => {
-    // onCategorySelected(activeCategory);
-  }, [activeCategory]);
+    onCategorySelected?.(icon);
+  }, [onCategorySelected]);
 
   return (
-    <>
-      {isMobile ?
-        <div
-          className="no-scrollbar flex items-center gap-x-4 overflow-x-auto px-2 py-2  md:py-5 whitespace-nowrap md:gap-x-8
-        shadow-md md:shadow-none
-        ">
+    <div className="sticky top-[80px] z-50 bg-white border-b border-gray-200">
+      {isMobile ? (
+        <div className="no-scrollbar flex items-center gap-x-4 overflow-x-auto px-2 py-2 whitespace-nowrap shadow-sm">
           {memoizedCategories.map((category) => (
             <IconButton
               key={category.label}
@@ -71,7 +64,8 @@ export const CategoryBarFilter = ({ onCategorySelected }: CategoryBarFilterProps
             />
           ))}
         </div>
-      : <Container>
+      ) : (
+        <Container>
           <VerticalScrollContainer>
             <div className="flex items-center gap-x-4 px-1 py-5 md:gap-x-8">
               {memoizedCategories.map((category) => (
@@ -84,9 +78,9 @@ export const CategoryBarFilter = ({ onCategorySelected }: CategoryBarFilterProps
                 />
               ))}
             </div>
-          </VerticalScrollContainer>{' '}
+          </VerticalScrollContainer>
         </Container>
-      }
-    </>
+      )}
+    </div>
   );
 };

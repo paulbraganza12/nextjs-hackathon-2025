@@ -1,6 +1,6 @@
 export const MobileSearchBar = () => {
   return (
-    <div className="flex h-14 w-full items-center justify-center rounded-full border border-gray-200 bg-white p-3 shadow-lg md:hidden">
+    <div className="flex h-14 w-full items-center justify-center rounded-full border border-gray-200 bg-white p-3 shadow-md md:hidden">
       <svg
         className="h-3.5 w-3.5"
         fill="none"

@@ -92,7 +92,7 @@ export const SearchBar = () => {
           />
         </div>
       </div>
-      <div className="md:hidden">
+      <div className="md:hidden mt-3">
         <MobileSearchBar />
       </div>
     </>
