@@ -1,61 +1,16 @@
 "use client";
-import { useRef, useState, useEffect, useCallback } from "react";
 import { DestinationDropdown } from "./DestinationDropdown";
 import { Dates } from "./Dates";
 import { Who } from "./Who";
 import { MobileSearchBar } from "./MobileSearchBar";
 import { SearchBarProps } from "./SearchBar";
 import { TopNavBar } from "./TopNavBar";
+import { InputItem } from "./InputItem";
+import { Separator } from "./Seperator";
+import { useInputFocus } from "./useInputFocus";
 
 export const SearchBar = ({ isTop }: SearchBarProps) => {
-  type InputName = "where" | "checkin" | "checkout" | "checkwho" | null;
-
-  const [focusedInput, setFocusedInput] = useState<InputName>(null);
-  const searchBarRef = useRef<HTMLDivElement>(null);
-
-  const whereRef = useRef<HTMLInputElement>(null!);
-  const checkInRef = useRef<HTMLInputElement>(null!);
-  const checkOutRef = useRef<HTMLInputElement>(null!);
-  const checkWhoRef = useRef<HTMLInputElement>(null!);
-
-  const refs: Record<string, React.RefObject<HTMLInputElement>> = {
-    where: whereRef,
-    checkin: checkInRef,
-    checkout: checkOutRef,
-    checkwho: checkWhoRef,
-  };
-
-  const handleFocus = useCallback((inputName: InputName) => {
-    setFocusedInput(inputName);
-    if (inputName && refs[inputName]?.current) {
-      refs[inputName].current.focus();
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const handleBlur = useCallback(() => {
-    setFocusedInput(null);
-  }, []);
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (searchBarRef.current && !searchBarRef.current.contains(event.target as Node)) {
-        handleBlur();
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [handleBlur]);
-
-  const getItemClass = (inputName: InputName) => {
-    const baseClasses = focusedInput !== inputName ? "hover:bg-gray-100" : "";
-    const focusClass = focusedInput === inputName ? "shadow-md bg-white border border-gray-300" : "";
-    return `max-h-[66px] border border-transparent ${baseClasses} rounded-full cursor-pointer ${focusClass}`.trim();
-  };
-
-  const isFocused = focusedInput !== null;
+  const { searchBarRef, focusedInput, setHoveredInput, handleFocus, activeInput, refs, isFocused } = useInputFocus();
 
   return (
     <>
@@ -66,53 +21,74 @@ export const SearchBar = ({ isTop }: SearchBarProps) => {
         {isTop ?
           <TopNavBar />
         : <>
-            <div className={getItemClass("where")}>
+            <InputItem
+              inputName="where"
+              activeInput={activeInput}
+              focusedInput={focusedInput}
+              setHoveredInput={setHoveredInput}
+              onFocus={() => handleFocus("where")}
+            >
               <DestinationDropdown
                 isFocused={focusedInput === "where"}
                 onFocus={() => handleFocus("where")}
-                inputRef={whereRef}
+                inputRef={refs.where}
               />
-            </div>
+            </InputItem>
 
-            {focusedInput !== "where" && focusedInput !== "checkin" && <div className="my-auto h-6 w-px bg-gray-300" />}
+            <Separator hide={activeInput === "where" || activeInput === "checkin"} />
 
-            <div className={getItemClass("checkin")}>
+            <InputItem
+              inputName="checkin"
+              activeInput={activeInput}
+              focusedInput={focusedInput}
+              setHoveredInput={setHoveredInput}
+              onFocus={() => handleFocus("checkin")}
+            >
               <Dates
-                inputRef={checkInRef}
+                inputRef={refs.checkin}
                 type="in"
                 onFocus={() => handleFocus("checkin")}
                 isFocused={focusedInput === "checkin"}
               />
-            </div>
+            </InputItem>
 
-            {focusedInput !== "checkin" && focusedInput !== "checkout" && (
-              <div className="my-auto h-6 w-px bg-gray-300" />
-            )}
+            <Separator hide={activeInput === "checkin" || activeInput === "checkout"} />
 
-            <div className={getItemClass("checkout")}>
+            <InputItem
+              inputName="checkout"
+              activeInput={activeInput}
+              focusedInput={focusedInput}
+              setHoveredInput={setHoveredInput}
+              onFocus={() => handleFocus("checkout")}
+            >
               <Dates
-                inputRef={checkOutRef}
+                inputRef={refs.checkout}
                 type="out"
                 onFocus={() => handleFocus("checkout")}
                 isFocused={focusedInput === "checkout"}
               />
-            </div>
+            </InputItem>
 
-            {focusedInput !== "checkout" && focusedInput !== "checkwho" && (
-              <div className="my-auto h-6 w-px bg-gray-300" />
-            )}
+            <Separator hide={activeInput === "checkout" || activeInput === "checkwho"} />
 
-            <div className={getItemClass("checkwho")}>
+            <InputItem
+              inputName="checkwho"
+              activeInput={activeInput}
+              focusedInput={focusedInput}
+              setHoveredInput={setHoveredInput}
+              onFocus={() => handleFocus("checkwho")}
+            >
               <Who
-                inputRef={checkWhoRef}
+                inputRef={refs.checkwho}
                 onFocus={() => handleFocus("checkwho")}
                 isFocused={focusedInput === "checkwho"}
                 enableSearchButton={isFocused}
               />
-            </div>
+            </InputItem>
           </>
         }
       </div>
+
       <div className="mt-3 md:hidden">
         <MobileSearchBar />
       </div>
