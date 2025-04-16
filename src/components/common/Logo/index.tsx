@@ -4,6 +4,7 @@ import { LogoProps } from "./Logo";
 export const Logo = ({ hideOnMobile }: LogoProps) => {
   return (
     <Link
+      aria-label="Airbnb home"
       href="/"
       className="flex h-full items-center gap-2"
     >

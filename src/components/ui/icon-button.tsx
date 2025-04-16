@@ -18,7 +18,7 @@ function IconButton({ icon, label, active = false, ...props }: IconButtonProps &
         className={`transication-all relative flex flex-col items-center duration-400 ease-out after:absolute after:top-[60px] after:left-0 after:h-[2px] after:transition-all active:scale-[0.85] ${
           active ?
             "opacity-100 after:w-full after:bg-black"
-          : "cursor-pointer opacity-60 hover:opacity-100 hover:after:w-full hover:after:bg-gray-300"
+          : "cursor-pointer opacity-70 hover:opacity-100 hover:after:w-full hover:after:bg-gray-300"
         }`}
       >
         <Image
