@@ -59,7 +59,7 @@ export const propertyData = [
     name: "Studio Haven",
     description: "Cozy studio apartment for couples.",
     imageUrls: [
-      "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/10.webp",
+      "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/13.webp",
       "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/11.webp",
       "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/12.webp",
     ],
@@ -111,7 +111,7 @@ export const propertyData = [
     name: "Farmhouse Elegance",
     description: "Renovated farmhouse with charm.",
     imageUrls: [
-      "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/10.webp",
+      "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/13.webp",
       "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/7.webp",
       "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/9.webp",
     ],
@@ -127,7 +127,7 @@ export const propertyData = [
     imageUrls: [
       "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/12.webp",
       "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/11.webp",
-      "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/10.webp",
+      "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/13.webp",
     ],
     price: "£380",
     rating: 4.62,

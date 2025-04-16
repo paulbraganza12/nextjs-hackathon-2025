@@ -53,7 +53,7 @@ export const ImageCarousel = ({ images, children, tag }: ImageCarouselProps) => 
                   <div className="relative h-full w-full">
                     <Image
                       src={image}
-                      alt="Gloucestershire, UK - Isis Lake"
+                      alt={image}
                       fill
                       priority
                       className="rounded-xl object-cover object-center"
