@@ -18,8 +18,8 @@ export const propertyData = [
     name: "Cityscape View",
     description: "Modern apartment with city views.",
     imageUrls: [
-      "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/4.webp",
       "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/5.webp",
+      "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/4.webp",
       "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/6.webp",
     ],
     price: "£375",
@@ -59,7 +59,7 @@ export const propertyData = [
     name: "Studio Haven",
     description: "Cozy studio apartment for couples.",
     imageUrls: [
-      "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/13.webp",
+      "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/16.webp",
       "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/11.webp",
       "https://res.cloudinary.com/dne8g2k6z/image/upload/v1744560377/next-js-hackathon/12.webp",
     ],
