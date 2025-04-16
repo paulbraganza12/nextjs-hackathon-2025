@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <footer className="mt-20 bg-gray-100">
       <div>
-        <Container>
+        <Container className="xl:container">
           <div>
             <Getaways />
           </div>

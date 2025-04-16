@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export const FooterBottom = () => {
   return (
-    <div className="mt-10 border-t border-gray-300 py-6 text-sm text-gray-600">
-      <Container className="flex justify-between">
+    <div className="text-sm text-gray-600">
+      <Container className="mt-10 flex justify-between border-t border-gray-300 py-6 xl:container">
         <div className="flex flex-col items-start">
           <p>© 2025 Airbnb, Inc.</p>
           <ul className="text-foreground flex flex-wrap gap-4">

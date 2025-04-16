@@ -11,7 +11,7 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-white transition-all duration-300 ${
+      className={`sticky top-0 z-50 bg-white transition-all duration-100 ease-in-out ${
         scrolledUp ? "md:min-h-[150px]" : "md:min-h-[168px]"
       } md:shadow-[0_1px_0_rgb(0_0_0_/_8%)]`}
     >
@@ -22,7 +22,7 @@ export const Navbar = () => {
           </div>
           <div
             className={`search-tabs hidden transition-all duration-300 md:block ${
-              scrolledUp ? "pointer-events-none -translate-y-4 opacity-0" : "translate-y-0 opacity-100"
+              scrolledUp ? "pointer-events-none -translate-y-40 opacity-0" : "translate-y-0 opacity-100"
             }`}
           >
             <Tabs />
@@ -35,7 +35,7 @@ export const Navbar = () => {
               scrolledUp ? "md:translate-y-[-70px] md:scale-80" : "md:translate-y-0"
             }`}
           >
-            <SearchBar />
+            <SearchBar isTop={scrolledUp} />
           </div>
         </div>
       </Container>
