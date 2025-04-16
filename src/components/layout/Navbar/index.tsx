@@ -32,7 +32,7 @@ export const Navbar = () => {
           </div>
           <div
             className={`search w-full transition-all duration-300 md:w-fit ${
-              scrolledUp ? "scale-80 md:translate-y-[-70px]" : "md:translate-y-0"
+              scrolledUp ? "md:translate-y-[-70px] md:scale-80" : "md:translate-y-0"
             }`}
           >
             <SearchBar />
